@@ -16,6 +16,9 @@ if cuisine:
 	
 	for item in menu_items:
 		st.write("-", item)
-		ingredients_list = ingredients[item]
-		if ingredients_list:
-			st.write("_" + ", ".join(ingredients_list) + "_")
+		try:
+			ingredients_list = ingredients[item]
+			if ingredients_list:
+				st.write("_" + ", ".join(ingredients_list) + "_")
+		except:
+			pass
